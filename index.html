@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KB-TK Sekolah Athalia - Event Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poetsen+One&display=swap" rel="stylesheet">
+  <style>
+    .font-poetsen { font-family: 'Poetsen One', cursive, sans-serif; }
+    .font-fredoka { font-family: 'Fredoka', sans-serif; }
+    .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-jakarta antialiased">
+  <div id="page-content"></div>
+
+  <script>
+    const data = {"eventFolder":"2026-11-sitin-kbtk","logoType":"image","logoUrl":"./assets/2026-11-sitin-kbtk/logo/logoathalia_white.png","schoolName":"KB-TK Sekolah Athalia","schoolTagline":{"id":"PROGRAM SIT-IN CLASS","en":"SIT-IN CLASS PROGRAM"},"colorPrimary":"#00457c","colorAccent":"#ffffff","colorFooter":"#00447a","headingFont":"font-montserrat","heroMediaType":"youtube","heroYoutubeUrl":"https://youtu.be/IqvC-U0_qNE","heroMp4Url":"./assets/2026-11-sitin-kbtk/video/hero.mp4","heroImg":"./assets/2026-11-sitin-kbtk/poster/hero.jpg","urgencyText":{"id":"🔥 KUOTA TERBATAS: Sit-In Class KB-TK Athalia November 2026!","en":"🔥 LIMITED SEATS: KB-TK Athalia Sit-In Class November 2026!"},"heroBadge":{"id":"✨ UNTUK SI KECIL USIA 1–4 TAHUN","en":"✨ FOR CHILDREN AGED 1–4 YEARS"},"heroTitle":{"id":"Little Hands, Big Wonder.","en":"Little Hands, Big Wonder."},"heroSub":{"id":"Satu hari eksplorasi seru di KB-TK Athalia. Si kecil belajar secara langsung bersama teman dan guru dalam lingkungan berbasis karakter Kristiani.","en":"One playful day of discovery at KB-TK Athalia. Hands-on learning in a Christian character-based environment."},"btnPrimaryText":{"id":"Ikut Sit-In Class (Gratis)","en":"Join Free Sit-In Class"},"btnWAText":{"id":"Tanya Admin","en":"Chat Admin on WA"},"showCountdown":true,"countdownTarget":"2026-11-30T23:59","countdownTitle":{"id":"⏳ Pendaftaran Sit-In Class Ditutup Dalam:","en":"⏳ Sit-In Class Registration Closes In:"},"showQuotaBar":true,"totalQuota":20,"remainingQuota":7,"quotaTitle":{"id":"🔥 Status Kuota Sesi November 2026","en":"🔥 November 2026 Seat Capacity Status"},"badges":[{"id":1,"title":{"id":"Usia 1–4 Tahun","en":"Ages 1–4"},"sub":{"id":"Kelas eksplorasi awal","en":"Early exploration class"}},{"id":2,"title":{"id":"Karakter Kristiani","en":"Christian Character"},"sub":{"id":"Pendidikan berbasis nilai","en":"Value-based education"}},{"id":3,"title":{"id":"Pendampingan","en":"Guided"},"sub":{"id":"Orang tua ikut menemani","en":"Parents can accompany"}},{"id":4,"title":{"id":"Kuota Terbatas","en":"Limited Seats"},"sub":{"id":"Maksimal 8 anak/sesi","en":"Max 8 kids/session"}}],"uspSectionTitle":{"id":"Mengapa Harus Mencoba Sit-In Class Athalia?","en":"Why Should You Try Athalia Sit-In Class?"},"usps":[{"id":1,"icon":"fa-heart","title":{"id":"Teacher Fit & Guru Peka","en":"Empathetic Teachers"},"desc":{"id":"Guru terlatih yang ramah, sigap, dan memahami pendekatan emosi anak.","en":"Trained teachers who guide every child according to their developmental pace."}},{"id":2,"icon":"fa-smile","title":{"id":"Judgment-Free Environment","en":"Judgment-Free Environment"},"desc":{"id":"Orang tua dan anak merasa diterima tanpa rasa khawatir dihakimi.","en":"Parents and children feel accepted without fear of judgment."}},{"id":3,"icon":"fa-hands-helping","title":{"id":"Kerjasama Ortu & Sekolah","en":"Parent & School Collaboration"},"desc":{"id":"Diskusi terbuka dan evaluasi berkala bersama orang tua.","en":"Open discussions and periodic evaluation with parents."}}],"actSectionTitle":{"id":"Bukan Sekadar Melihat-Lihat","en":"More Than Just Watching"},"activities":[{"id":1,"img":"./assets/2026-11-sitin-kbtk/poster/foto1.jpg","title":{"id":"✋ Sentuhan Tekstur","en":"✋ Texture Touch"},"desc":{"id":"Mengenal dunia lewat sentuhan lembut, kasar, basah & kering.","en":"Discovering world through soft, rough, wet & dry textures."}},{"id":2,"img":"./assets/2026-11-sitin-kbtk/poster/foto2.jpg","title":{"id":"🎭 Bermain Peran","en":"🎭 Role Play"},"desc":{"id":"Menjadi dokter, pedagang, atau koki bersama teman baru.","en":"Playing doctor, merchant, or chef with new friends."}},{"id":3,"img":"./assets/2026-11-sitin-kbtk/poster/foto3.jpg","title":{"id":"🌱 Menanam","en":"🌱 Gardening"},"desc":{"id":"Menyentuh tanah dan merawat tanaman dengan tangan sendiri.","en":"Touching soil and caring for plants with their own hands."}},{"id":4,"img":"./assets/2026-11-sitin-kbtk/poster/foto4.jpg","title":{"id":"🔍 Memasak","en":"🔍 Cooking"},"desc":{"id":"Mengaduk, menuang, dan mencicipi hasil karya kecilnya.","en":"Stirring, pouring, and tasting their own little creations."}}],"testimonialSectionTitle":{"id":"Kata Orang Tua Murid","en":"What Parents Say"},"testimonials":[{"id":1,"name":"Ibu Maria","role":{"id":"Mama Kenzo (Usia 3 Tahun)","en":"Kenzo's Mom (Age 3)"},"quote":{"id":"Awalnya khawatir Kenzo pemalu, tapi gurunya sangat gercep merangkul. Kenzo langsung betah dan senang!","en":"I was worried Kenzo was too shy, but the teachers welcomed him warmly. He immediately loved it!"}}],"faqSectionTitle":{"id":"Pertanyaan Sering Diajukan (FAQ)","en":"Frequently Asked Questions (FAQ)"},"faqs":[{"id":1,"q":{"id":"Apakah orang tua boleh menemani di dalam kelas?","en":"Can parents accompany children inside the class?"},"a":{"id":"Ya! Pada program Sit-In Class, orang tua sangat dianjurkan menemani si kecil secara penuh.","en":"Yes! Parents are warmly encouraged to join and accompany their child throughout the session."}},{"id":2,"q":{"id":"Berapa lama durasi setiap sesi?","en":"How long is each session?"},"a":{"id":"Setiap sesi berlangsung selama 60 hingga 90 menit penuh dengan aktivitas interaktif.","en":"Each session runs for 60 to 90 minutes packed with engaging interactive activities."}}],"formTitle":{"id":"Formulir Pendaftaran Sit-In Class","en":"Sit-In Class Registration Form"},"formSubtitle":{"id":"Langkah awal menuju pengalaman belajar terbaik si kecil. Konfirmasi kehadiran Anda sekarang!","en":"The first step to your child's bright learning journey. Confirm your attendance today!"},"scriptUrl":"","whatsapp":"6287771414812","sessions":{"id":"Sesi Sabtu Pagi (09.00 - 10.30 WIB), Sesi Sabtu Siang (11.00 - 12.30 WIB)","en":"Saturday Morning Session (09.00 - 10.30 AM), Saturday Afternoon Session (11.00 - 12.30 PM)"},"footerAddress":{"id":"Regensi Melati Mas Blok B1, D1, B14, BSD, Serpong Utara, Tangerang Selatan","en":"Regensi Melati Mas Block B1, D1, B14, BSD, North Serpong, South Tangerang"}};
+    let currentLang = 'id';
+
+    function getYouTubeEmbedUrl(url) {
+      if (!url) return '';
+      const regExp = /^.*(youtu.be/|v/|u/w/|embed/|watch?v=|&v=)([^#&?]*).*/;
+      const match = url.match(regExp);
+      const videoId = (match && match[2].length === 11) ? match[2] : '';
+      return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}` : url;
+    }
+
+    function getHeadingClass(fontKey) {
+      return fontKey === 'font-montserrat' ? 'font-montserrat font-bold sm:font-extrabold' : fontKey;
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      renderPage();
+      startTimer();
+    }
+
+    let timerInterval;
+    function startTimer() {
+      if(timerInterval) clearInterval(timerInterval);
+      if(!data.showCountdown || !data.countdownTarget) return;
+
+      function update() {
+        const targetTime = new Date(data.countdownTarget).getTime();
+        const now = new Date().getTime();
+        const diff = targetTime - now;
+
+        const dEl = document.getElementById('cd-d');
+        const hEl = document.getElementById('cd-h');
+        const mEl = document.getElementById('cd-m');
+        const sEl = document.getElementById('cd-s');
+
+        if(!dEl) return;
+
+        if(diff <= 0 || isNaN(diff)) {
+          dEl.innerText = "00";
+          hEl.innerText = "00";
+          mEl.innerText = "00";
+          sEl.innerText = "00";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        dEl.innerText = days < 10 ? '0' + days : days;
+        hEl.innerText = hours < 10 ? '0' + hours : hours;
+        mEl.innerText = mins < 10 ? '0' + mins : mins;
+        sEl.innerText = secs < 10 ? '0' + secs : secs;
+      }
+
+      update();
+      timerInterval = setInterval(update, 1000);
+    }
+
+    function renderPage() {
+      const lang = currentLang;
+      const headingClass = getHeadingClass(data.headingFont);
+      const sessionOptions = (data.sessions[lang] || '').split(',').map(s => `<option value="${s.trim()}">${s.trim()}</option>`).join('');
+      
+      let logoHtml = `<div style="background-color: ${data.colorAccent}" class="w-7 h-7 sm:w-9 sm:h-9 rounded-full text-slate-950 flex items-center justify-center font-bold text-xs sm:text-lg ${headingClass} flex-shrink-0">${data.schoolName.charAt(0)}</div>`;
+      if(data.logoType === 'image' && data.logoUrl) {
+        logoHtml = `<img src="${data.logoUrl}" alt="Logo" class="h-7 sm:h-9 w-auto object-contain flex-shrink-0">`;
+      }
+
+      let heroMediaHtml = '';
+      if(data.heroMediaType === 'youtube' && data.heroYoutubeUrl) {
+        const embedUrl = getYouTubeEmbedUrl(data.heroYoutubeUrl);
+        heroMediaHtml = `
+          <div class="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl border-2 sm:border-4 border-white/10 aspect-video">
+            <iframe src="${embedUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+          </div>
+        `;
+      } else if(data.heroMediaType === 'mp4' && data.heroMp4Url) {
+        heroMediaHtml = `
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/10 aspect-video bg-black">
+            <video src="${data.heroMp4Url}" controls autoplay loop muted class="w-full h-full object-cover"></video>
+          </div>
+        `;
+      } else {
+        heroMediaHtml = `
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/10">
+            <img src="${data.heroImg}" alt="Poster" class="w-full h-auto max-h-[420px] object-cover">
+          </div>
+        `;
+      }
+
+      const takenQuota = Math.max(0, data.totalQuota - data.remainingQuota);
+      const quotaPercent = Math.min(100, Math.round((takenQuota / data.totalQuota) * 100)) || 0;
+
+      const labels = {
+        parentName: lang === 'id' ? 'Nama Orang Tua / Wali' : 'Parent / Guardian Name',
+        childName: lang === 'id' ? 'Nama Anak' : 'Child Name',
+        childAge: lang === 'id' ? 'Usia Anak (1-4 Tahun)' : 'Child Age (1-4 Years)',
+        waNumber: lang === 'id' ? 'Nomor WhatsApp Aktif' : 'Active WhatsApp Number',
+        selectSession: lang === 'id' ? 'Pilih Sesi Uji Coba' : 'Select Trial Session',
+        rsvpConfirm: lang === 'id' ? 'Konfirmasi Kehadiran RSVP' : 'RSVP Attendance Confirmation',
+        rsvpYes: lang === 'id' ? '✅ Pasti Hadir Sesuai Jadwal' : '✅ Confirmed Attendance',
+        rsvpNeedWA: lang === 'id' ? '💬 Butuh Tanya Admin Dulu Via WA' : '💬 Need Admin Confirmation via WA',
+        placeholderParent: lang === 'id' ? 'Contoh: Ibu Maria' : 'e.g., Mrs. Maria',
+        placeholderChild: lang === 'id' ? 'Contoh: Kenzo' : 'e.g., Kenzo',
+        placeholderAge: lang === 'id' ? 'Contoh: 3 Tahun' : 'e.g., 3 Years',
+        days: lang === 'id' ? 'Hari' : 'Days',
+        hours: lang === 'id' ? 'Jam' : 'Hours',
+        mins: lang === 'id' ? 'Menit' : 'Mins',
+        secs: lang === 'id' ? 'Detik' : 'Secs'
+      };
+
+      const desktopCtaHtml = `
+        <div class="hidden md:flex md:flex-row gap-3 mt-7">
+          <a href="#daftar-form" style="background-color: ${data.colorAccent}" class="text-slate-950 font-extrabold px-6 py-3.5 rounded-2xl text-center shadow-lg transition text-sm tracking-wide">
+            ${data.btnPrimaryText[lang] || ''}
+          </a>
+          <a href="https://wa.me/${data.whatsapp}?text=Halo%20Admin%20Sekolah%20Athalia" target="_blank" class="border border-white/30 hover:bg-white/10 text-white font-semibold px-5 py-3.5 rounded-2xl text-center flex items-center justify-center gap-2 text-sm tracking-wide">
+            <i class="fab fa-whatsapp text-emerald-400 text-lg"></i> ${data.btnWAText[lang] || ''}
+          </a>
+        </div>
+      `;
+
+      const mobileCtaHtml = `
+        <div class="flex md:hidden flex-col gap-2.5 mt-5 w-full">
+          <a href="#daftar-form" style="background-color: ${data.colorAccent}" class="w-full text-slate-950 font-extrabold px-5 py-3.5 rounded-xl text-center shadow-lg transition text-xs tracking-wide">
+            ${data.btnPrimaryText[lang] || ''}
+          </a>
+          <a href="https://wa.me/${data.whatsapp}?text=Halo%20Admin%20Sekolah%20Athalia" target="_blank" class="w-full border border-white/30 hover:bg-white/10 text-white font-semibold px-4 py-3.5 rounded-xl text-center flex items-center justify-center gap-2 text-xs tracking-wide">
+            <i class="fab fa-whatsapp text-emerald-400 text-base"></i> ${data.btnWAText[lang] || ''}
+          </a>
+        </div>
+      `;
+
+      document.getElementById('page-content').innerHTML = `
+        <div class="bg-slate-50 text-slate-800 min-h-full font-jakarta">
+          <div style="background-color: ${data.colorAccent}" class="text-slate-950 text-[10.5px] sm:text-xs font-bold py-1.5 px-3 text-center leading-tight tracking-wide">
+            ${data.urgencyText[lang] || ''}
+          </div>
+
+          <header style="background-color: ${data.colorPrimary}" class="text-white sticky top-0 z-30 shadow-md">
+            <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex justify-between items-center gap-2 overflow-hidden">
+              <div class="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+                ${logoHtml}
+                <div class="min-w-0">
+                  <div class="${headingClass} text-xs sm:text-base leading-tight truncate">${data.schoolName}</div>
+                  <div class="hidden sm:block text-[10px] text-teal-200 uppercase tracking-widest font-semibold truncate">${data.schoolTagline[lang] || ''}</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <div class="bg-black/20 p-1 rounded-full flex border border-white/20 text-[9px] sm:text-xs">
+                  <button onclick="setLanguage('id')" class="px-2 py-0.5 rounded-full font-bold ${lang === 'id' ? 'bg-white text-slate-900 shadow' : 'text-white/80'}">🇮🇩</button>
+                  <button onclick="setLanguage('en')" class="px-2 py-0.5 rounded-full font-bold ${lang === 'en' ? 'bg-white text-slate-900 shadow' : 'text-white/80'}">🇬🇧</button>
+                </div>
+                <a href="#daftar-form" style="background-color: ${data.colorAccent}" class="hidden sm:inline-block text-slate-950 font-extrabold text-xs px-4 py-2 rounded-full shadow transition whitespace-nowrap tracking-wide">${data.btnPrimaryText[lang] || ''}</a>
+              </div>
+            </div>
+          </header>
+
+          <section style="background-color: ${data.colorPrimary}" class="text-white py-8 sm:py-14 px-4 sm:px-6 relative overflow-hidden">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-center relative z-10">
+              <div>
+                <span class="inline-block bg-white/15 text-white border border-white/25 text-[10.5px] sm:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 sm:mb-4">
+                  ${data.heroBadge[lang] || ''}
+                </span>
+                <h1 class="${headingClass} text-[26px] sm:text-4xl lg:text-[46px] leading-[1.18] tracking-tight text-white">
+                  ${data.heroTitle[lang] || ''}
+                </h1>
+                <p class="mt-3 sm:mt-4 text-slate-100 text-[13px] sm:text-sm lg:text-base leading-relaxed opacity-95">
+                  ${data.heroSub[lang] || ''}
+                </p>
+                ${desktopCtaHtml}
+              </div>
+              <div>
+                ${heroMediaHtml}
+                ${mobileCtaHtml}
+              </div>
+            </div>
+          </section>
+
+          ${(data.showCountdown || data.showQuotaBar) ? `
+          <section class="max-w-4xl mx-auto px-4 -mt-3 sm:-mt-5 relative z-20">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 sm:p-6 space-y-4">
+              ${data.showCountdown ? `
+              <div class="text-center">
+                <p class="text-xs sm:text-sm font-bold text-slate-700 mb-2.5 tracking-tight">${data.countdownTitle[lang] || ''}</p>
+                <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+                  <div class="bg-slate-900 text-white p-2 rounded-xl text-center">
+                    <span id="cd-d" class="block font-bold text-base sm:text-xl text-yellow-400 font-mono">00</span>
+                    <span class="text-[9px] uppercase tracking-wider text-slate-400 block font-semibold">${labels.days}</span>
+                  </div>
+                  <div class="bg-slate-900 text-white p-2 rounded-xl text-center">
+                    <span id="cd-h" class="block font-bold text-base sm:text-xl text-yellow-400 font-mono">00</span>
+                    <span class="text-[9px] uppercase tracking-wider text-slate-400 block font-semibold">${labels.hours}</span>
+                  </div>
+                  <div class="bg-slate-900 text-white p-2 rounded-xl text-center">
+                    <span id="cd-m" class="block font-bold text-base sm:text-xl text-yellow-400 font-mono">00</span>
+                    <span class="text-[9px] uppercase tracking-wider text-slate-400 block font-semibold">${labels.mins}</span>
+                  </div>
+                  <div class="bg-slate-900 text-white p-2 rounded-xl text-center">
+                    <span id="cd-s" class="block font-bold text-base sm:text-xl text-yellow-400 font-mono">00</span>
+                    <span class="text-[9px] uppercase tracking-wider text-slate-400 block font-semibold">${labels.secs}</span>
+                  </div>
+                </div>
+              </div>` : ''}
+
+              ${data.showQuotaBar ? `
+              <div class="space-y-1.5 pt-2 border-t border-slate-100">
+                <div class="flex justify-between items-center text-xs font-bold">
+                  <span class="text-slate-800">${data.quotaTitle[lang] || ''}</span>
+                  <span class="text-rose-600 font-extrabold">${data.remainingQuota} / ${data.totalQuota} ${lang === 'id' ? 'Kursi Tersisa' : 'Seats Left'}</span>
+                </div>
+                <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                  <div style="width: ${quotaPercent}%" class="bg-gradient-to-r from-amber-400 to-rose-500 h-full rounded-full transition-all duration-500"></div>
+                </div>
+              </div>` : ''}
+            </div>
+          </section>` : ''}
+
+          <section class="max-w-5xl mx-auto px-4 py-8 sm:py-10">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-slate-100 p-3 sm:p-4 grid grid-cols-2 md:grid-cols-4 gap-2.5 text-center">
+              ${data.badges.map((b) => `
+                <div class="p-2 bg-slate-50 sm:bg-transparent rounded-lg sm:rounded-none border sm:border-0 border-slate-100">
+                  <span style="color: ${data.colorPrimary}" class="block ${headingClass} text-xs sm:text-sm md:text-base font-bold">${b.title[lang] || ''}</span>
+                  <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5 leading-tight font-medium">${b.sub[lang] || ''}</span>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+
+          <section class="max-w-5xl mx-auto px-4 pb-10 sm:pb-14">
+            <div class="text-center mb-6 sm:mb-10">
+              <h2 style="color: ${data.colorPrimary}" class="${headingClass} text-xl sm:text-2xl lg:text-3xl tracking-tight">${data.uspSectionTitle[lang] || ''}</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              ${data.usps.map(u => `
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-start">
+                  <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-lg mb-3 flex-shrink-0"><i class="fas ${u.icon}"></i></div>
+                  <h3 class="${headingClass} text-sm sm:text-base text-slate-800 mb-1.5 font-bold">${u.title[lang] || ''}</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">${u.desc[lang] || ''}</p>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+
+          <section class="bg-white py-10 sm:py-14 border-y border-slate-100">
+            <div class="max-w-5xl mx-auto px-4">
+              <h2 style="color: ${data.colorPrimary}" class="${headingClass} text-xl sm:text-2xl lg:text-3xl text-center mb-6 sm:mb-8 tracking-tight">${data.actSectionTitle[lang] || ''}</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                ${data.activities.map(a => `
+                  <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow transition">
+                    ${a.img ? `
+                    <div class="w-full sm:w-2/5 h-40 sm:h-auto bg-slate-200 flex-shrink-0 relative overflow-hidden">
+                      <img src="${a.img}" alt="${a.title[lang] || ''}" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>` : ''}
+                    <div class="p-4 sm:p-5 flex-1 flex flex-col justify-center">
+                      <h3 class="${headingClass} text-sm sm:text-base text-slate-800 font-bold mb-1">${a.title[lang] || ''}</h3>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">${a.desc[lang] || ''}</p>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+
+          ${data.testimonials.length > 0 ? `
+          <section class="max-w-4xl mx-auto px-4 py-10 sm:py-12">
+            <h2 style="color: ${data.colorPrimary}" class="${headingClass} text-xl sm:text-2xl text-center mb-6 tracking-tight">${data.testimonialSectionTitle[lang] || ''}</h2>
+            <div class="grid grid-cols-1 gap-3 sm:gap-4">
+              ${data.testimonials.map(t => `
+                <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-3 sm:gap-4">
+                  <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-emerald-50 text-emerald-600 flex-shrink-0 flex items-center justify-center font-bold text-xs sm:text-base">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">"${t.quote[lang] || ''}"</p>
+                    <span class="block text-xs font-bold text-slate-800 mt-2">${t.name} <span class="font-normal text-slate-400">(${t.role[lang] || ''})</span></span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </section>` : ''}
+
+          ${data.faqs.length > 0 ? `
+          <section class="bg-slate-100 py-10 sm:py-12 border-t border-slate-200">
+            <div class="max-w-3xl mx-auto px-4">
+              <h2 style="color: ${data.colorPrimary}" class="${headingClass} text-xl sm:text-2xl text-center mb-6 tracking-tight">${data.faqSectionTitle[lang] || ''}</h2>
+              <div class="space-y-3">
+                ${data.faqs.map(f => `
+                  <details class="group bg-white p-4 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-xs sm:text-sm text-slate-800 select-none">
+                      <span>${f.q[lang] || ''}</span>
+                      <span class="transition group-open:rotate-180 text-slate-400"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t pt-3 border-slate-100">${f.a[lang] || ''}</p>
+                  </details>
+                `).join('')}
+              </div>
+            </div>
+          </section>` : ''}
+
+          <section id="daftar-form" class="max-w-xl mx-auto px-4 py-12 sm:py-16">
+            <div class="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl border border-slate-100">
+              <div class="text-center mb-6">
+                <h2 style="color: ${data.colorPrimary}" class="${headingClass} text-xl sm:text-2xl tracking-tight">${data.formTitle[lang] || ''}</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">${data.formSubtitle[lang] || ''}</p>
+              </div>
+              <form id="leadForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">${labels.parentName}</label>
+                  <input type="text" id="parentName" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm" placeholder="${labels.placeholderParent}">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">${labels.childName}</label>
+                    <input type="text" id="childName" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm" placeholder="${labels.placeholderChild}">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">${labels.childAge}</label>
+                    <input type="text" id="childAge" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm" placeholder="${labels.placeholderAge}">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">${labels.waNumber}</label>
+                  <input type="tel" id="whatsapp" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm" placeholder="087771414812">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">${labels.selectSession}</label>
+                  <select id="selectedSession" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white">
+                    ${sessionOptions}
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">${labels.rsvpConfirm}</label>
+                  <select id="rsvpStatus" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white">
+                    <option value="${labels.rsvpYes}">${labels.rsvpYes}</option>
+                    <option value="${labels.rsvpNeedWA}">${labels.rsvpNeedWA}</option>
+                  </select>
+                </div>
+                <button type="submit" id="btnSubmit" style="background-color: ${data.colorAccent}" class="w-full text-slate-950 font-extrabold py-3.5 rounded-xl shadow-lg transition text-xs sm:text-sm tracking-wide">
+                  ${data.btnPrimaryText[lang] || ''}
+                </button>
+              </form>
+              <div id="statusMsg" class="hidden mt-3 p-3 rounded-xl text-center text-xs font-semibold"></div>
+            </div>
+          </section>
+
+          <footer style="background-color: ${data.colorFooter || '#0f172a'}" class="text-white py-8 px-4 text-center text-xs text-slate-400">
+            <p class="${headingClass} text-white text-sm mb-1">${data.schoolName}</p>
+            <p class="max-w-md mx-auto mb-4">${data.footerAddress[lang] || ''}</p>
+            <p>© 2026 ${data.schoolName}. All rights reserved.</p>
+          </footer>
+
+          <a href="https://wa.me/${data.whatsapp}?text=Halo%20Admin%20Sekolah%20Athalia" target="_blank" class="fixed bottom-5 right-5 bg-emerald-500 hover:bg-emerald-600 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl z-40">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      `;
+
+      const form = document.getElementById('leadForm');
+      if(form) {
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const btn = document.getElementById('btnSubmit');
+          const msg = document.getElementById('statusMsg');
+          btn.disabled = true;
+          btn.innerText = 'Sending...';
+
+          const payload = {
+            parentName: document.getElementById('parentName').value,
+            childName: document.getElementById('childName').value,
+            childAge: document.getElementById('childAge').value,
+            whatsapp: document.getElementById('whatsapp').value,
+            selectedSession: document.getElementById('selectedSession').value,
+            rsvpStatus: document.getElementById('rsvpStatus').value
+          };
+
+          const waText = `Halo Admin ${data.schoolName}, pendaftaran Event:\n- Nama Ortu: ${payload.parentName}\n- Nama Anak: ${payload.childName} (${payload.childAge})\n- Sesi: ${payload.selectedSession}\n- RSVP: ${payload.rsvpStatus}`;
+
+          if(!data.scriptUrl) {
+            window.open(`https://wa.me/${data.whatsapp}?text=${encodeURIComponent(waText)}`, '_blank');
+            btn.disabled = false;
+            btn.innerText = data.btnPrimaryText[lang];
+            return;
+          }
+
+          fetch(data.scriptUrl, { method: 'POST', body: JSON.stringify(payload) })
+          .then(res => {
+            btn.disabled = false;
+            btn.innerText = data.btnPrimaryText[lang];
+            msg.className = "mt-3 p-3 rounded-xl text-center text-xs font-semibold bg-emerald-100 text-emerald-800";
+            msg.innerText = lang === 'id' ? "Pendaftaran Berhasil!" : "Registration Successful!";
+            form.reset();
+          })
+          .catch(err => {
+            btn.disabled = false;
+            btn.innerText = data.btnPrimaryText[lang];
+            window.open(`https://wa.me/${data.whatsapp}?text=${encodeURIComponent(waText)}`, '_blank');
+          });
+        });
+      }
+    }
+
+    renderPage();
+    startTimer();
+  </script>
+</body>
+</html>
