@@ -384,48 +384,61 @@
         </div>
       `;
 
-      const form = document.getElementById('leadForm');
-      if(form) {
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          const btn = document.getElementById('btnSubmit');
-          const msg = document.getElementById('statusMsg');
-          btn.disabled = true;
-          btn.innerText = 'Sending...';
+// Handling Pengiriman Formulir (Sudah ditambah mode: 'no-cors' & header text/plain)
+const form = document.getElementById('leadForm');
+const scriptUrl = "https://script.google.com/macros/s/AKfycbzBJp1rfhUvd2WDOKeyUbsJYY-3lbSTbFDVtKv-M-4R2d1EHuuKYgm2JYdheBQt2o2e/exec";
 
-          const payload = {
-            parentName: document.getElementById('parentName').value,
-            childName: document.getElementById('childName').value,
-            childAge: document.getElementById('childAge').value,
-            whatsapp: document.getElementById('whatsapp').value,
-            selectedSession: document.getElementById('selectedSession').value,
-            rsvpStatus: document.getElementById('rsvpStatus').value
-          };
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = document.getElementById('btnSubmit');
+    const msg = document.getElementById('statusMsg');
+    btn.disabled = true;
+    btn.innerText = 'Sending...';
 
-          const waText = `Halo Admin ${data.schoolName}, pendaftaran Event:\n- Nama Ortu: ${payload.parentName}\n- Nama Anak: ${payload.childName} (${payload.childAge})\n- Sesi: ${payload.selectedSession}\n- RSVP: ${payload.rsvpStatus}`;
+    const payload = {
+      parentName: document.getElementById('parentName').value,
+      childName: document.getElementById('childName').value,
+      childAge: document.getElementById('childAge').value,
+      whatsapp: document.getElementById('whatsapp').value,
+      selectedSession: document.getElementById('selectedSession').value,
+      rsvpStatus: document.getElementById('rsvpStatus').value
+    };
 
-          if(!data.scriptUrl) {
-            window.open(`https://wa.me/${data.whatsapp}?text=${encodeURIComponent(waText)}`, '_blank');
-            btn.disabled = false;
-            btn.innerText = data.btnPrimaryText[lang];
-            return;
-          }
+    const waText = `Halo Admin KB-TK Sekolah Athalia, pendaftaran Event:\n- Nama Ortu: ${payload.parentName}\n- Nama Anak: ${payload.childName} (${payload.childAge})\n- Sesi: ${payload.selectedSession}\n- RSVP: ${payload.rsvpStatus}`;
 
-          fetch(data.scriptUrl, { method: 'POST', body: JSON.stringify(payload) })
-          .then(res => {
-            btn.disabled = false;
-            btn.innerText = data.btnPrimaryText[lang];
-            msg.className = "mt-3 p-3 rounded-xl text-center text-xs font-semibold bg-emerald-100 text-emerald-800";
-            msg.innerText = lang === 'id' ? "Pendaftaran Berhasil!" : "Registration Successful!";
-            form.reset();
-          })
-          .catch(err => {
-            btn.disabled = false;
-            btn.innerText = data.btnPrimaryText[lang];
-            window.open(`https://wa.me/${data.whatsapp}?text=${encodeURIComponent(waText)}`, '_blank');
-          });
-        });
-      }
+    if (!scriptUrl) {
+      window.open(`https://wa.me/6287771414812?text=${encodeURIComponent(waText)}`, '_blank');
+      btn.disabled = false;
+      btn.innerText = 'Ikut Sit-In Class (Gratis)';
+      return;
+    }
+
+    // Menggunakan mode 'no-cors' agar lolos dari aturan CORS browser
+    fetch(scriptUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(() => {
+      // Pada mode no-cors, respon dianggap berhasil dikirim ke Google Sheets
+      btn.disabled = false;
+      btn.innerText = 'Ikut Sit-In Class (Gratis)';
+      msg.className = "mt-3 p-3 rounded-xl text-center text-xs font-semibold bg-emerald-100 text-emerald-800";
+      msg.innerText = "Pendaftaran Berhasil Disimpan!";
+      msg.classList.remove('hidden');
+      form.reset();
+    })
+    .catch(err => {
+      btn.disabled = false;
+      btn.innerText = 'Ikut Sit-In Class (Gratis)';
+      window.open(`https://wa.me/6287771414812?text=${encodeURIComponent(waText)}`, '_blank');
+    });
+  });
+}
     }
 
     renderPage();
