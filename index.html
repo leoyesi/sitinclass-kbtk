@@ -23,10 +23,15 @@
 
     function getYouTubeEmbedUrl(url) {
       if (!url) return '';
-      const regExp = /^.*(youtu.be/|v/|u/w/|embed/|watch?v=|&v=)([^#&?]*).*/;
-      const match = url.match(regExp);
-      const videoId = (match && match[2].length === 11) ? match[2] : '';
-      return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}` : url;
+      let videoId = '';
+      if (url.indexOf('youtu.be/') !== -1) {
+        videoId = url.split('youtu.be/')[1].split('?')[0].split('&')[0];
+      } else if (url.indexOf('v=') !== -1) {
+        videoId = url.split('v=')[1].split('&')[0];
+      } else if (url.indexOf('embed/') !== -1) {
+        videoId = url.split('embed/')[1].split('?')[0];
+      }
+      return videoId ? 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&mute=1&loop=1&playlist=' + videoId : url;
     }
 
     function getHeadingClass(fontKey) {
@@ -86,7 +91,7 @@
       
       let logoHtml = `<div style="background-color: ${data.colorAccent}" class="w-7 h-7 sm:w-9 sm:h-9 rounded-full text-slate-950 flex items-center justify-center font-bold text-xs sm:text-lg ${headingClass} flex-shrink-0">${data.schoolName.charAt(0)}</div>`;
       if(data.logoType === 'image' && data.logoUrl) {
-        logoHtml = `<img src="${data.logoUrl}" alt="Logo" class="h-7 sm:h-9 w-auto object-contain flex-shrink-0">`;
+        logoHtml = `<img src="${data.logoUrl}" alt="Logo" class="h-7 sm:h-9 w-auto object-contain flex-shrink-0" onerror="this.outerHTML='<div style=\'background-color: ${data.colorAccent}\' class=\'w-7 h-7 sm:w-9 sm:h-9 rounded-full text-slate-950 flex items-center justify-center font-bold text-xs sm:text-lg flex-shrink-0\'>${data.schoolName.charAt(0)}</div>';">`;
       }
 
       let heroMediaHtml = '';
@@ -273,7 +278,7 @@
                   <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow transition">
                     ${a.img ? `
                     <div class="w-full sm:w-2/5 h-40 sm:h-auto bg-slate-200 flex-shrink-0 relative overflow-hidden">
-                      <img src="${a.img}" alt="${a.title[lang] || ''}" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                      <img src="${a.img}" alt="${a.title[lang] || ''}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.display='none';">
                     </div>` : ''}
                     <div class="p-4 sm:p-5 flex-1 flex flex-col justify-center">
                       <h3 class="${headingClass} text-sm sm:text-base text-slate-800 font-bold mb-1">${a.title[lang] || ''}</h3>
